@@ -23,7 +23,7 @@
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
             />
     </FrameLayout>
-<edmt.dev.advancednestedscrollview.CustomNestedScrollView
+<edmt.dev.advancednestedscrollview.AdvancedNestedScrollView
     android:id="@+id/nested_scroll_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -104,7 +104,7 @@
             android:layout_height="wrap_content" />
     </FrameLayout>
 
-</edmt.dev.advancednestedscrollview.CustomNestedScrollView>
+</edmt.dev.advancednestedscrollview.AdvancedNestedScrollView>
 
 
 </android.support.design.widget.CoordinatorLayout>
