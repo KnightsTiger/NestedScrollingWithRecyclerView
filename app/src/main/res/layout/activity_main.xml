@@ -7,6 +7,104 @@
     android:background="@drawable/newjp"
     tools:context=".MainActivity">
 
+    <FrameLayout
+        android:id="@+id/toolbarContainer"
+        android:fitsSystemWindows="true"
+        android:background="@drawable/toolbarbackgroundgradiant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_height="?attr/actionBarSize"
+            android:layout_width="wrap_content"
+            android:id="@+id/toolbar"
+            android:background="@android:color/transparent"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            />
+    </FrameLayout>
+<edmt.dev.advancednestedscrollview.CustomNestedScrollView
+    android:id="@+id/nested_scroll_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="com.xsample.nestedscrollingwithrecyclerview.behaviour.CustomBehaviour"
+    
+    >
+    <FrameLayout
+        android:id="@+id/card_container"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:descendantFocusability="blocksDescendants"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_view"
+            app:cardCornerRadius="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:id="@+id/card_title"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:paddingBottom="4dp"
+                    android:paddingLeft="24dp"
+                    android:paddingRight="24dp"
+                    android:paddingTop="16dp"
+                    android:text="Title one"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/card_sub_title"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="24dp"
+                    android:paddingRight="24dp"
+                    android:paddingTop="16dp"
+                    android:text="Title sub t"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <edmt.dev.advancednestedscrollview.MaxHeightRecyclerView
+                        android:id="@+id/card_recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </edmt.dev.advancednestedscrollview.MaxHeightRecyclerView>
+                    <View
+                        android:id="@+id/card_header_shadow"
+                        android:layout_width="match_parent"
+                        android:layout_height="6dp"
+                        android:alpha="0"
+                        android:background="@drawable/toolbar_shadow"
+                        />
+
+                </FrameLayout>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_gravity="end|top"
+            android:layout_marginRight="24dp"
+            android:src="@drawable/ic_add_shopping_cart_white_24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+</edmt.dev.advancednestedscrollview.CustomNestedScrollView>
 
 
 </android.support.design.widget.CoordinatorLayout>
